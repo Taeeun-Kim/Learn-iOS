@@ -1,11 +1,13 @@
 import UIKit
 
-var str = "Hello, playground"
+var str = "Hello, I am Taeeun"
+var numbers = [1, 2, 3, 4]
+var names = ["Taeeun", "Max", "DK"]
 
-for i in 0..<100{
-    i
+for index in 0..<numbers.count{
+    print(numbers[index])
 }
 
-for i in 0..<100 {
-    sin(Double(i)/2)
+names.forEach{
+    print($0)
 }
