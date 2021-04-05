@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CoreDataDemo
+//  Bookworm
 //
-//  Created by Taeeun Kim on 03.04.21.
+//  Created by Taeeun Kim on 05.04.21.
 //
 
 import UIKit
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "CoreDataDemo")
+        let container = NSPersistentContainer(name: "Bookworm")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
