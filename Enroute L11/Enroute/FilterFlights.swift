@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct FilterFlights: View {
-    @ObservedObject var allAirports = Airports.all
+    @ObservedObject var allAirports = Airports.all // View Model, 복붙 from 메인뷰(FlightListEntry)
     @ObservedObject var allAirlines = Airlines.all
 
     // 아직 var flightSearch와 var isPresented들은 initialize가 안됨 -> init으로 초기화 ㄱ
@@ -39,20 +39,32 @@ struct FilterFlights: View {
     */
     
     var body: some View {
-        NavigationView {
+        NavigationView { // Form에는 네비게이션뷰가 필수!!!!!!!
             Form {
-                // 대부분 String, selection, content 적혀있는 Picker만 사용함
-                // selection: what I want to change -> $draft.destination
-                // Picker의 content는 대부분 ForEach 사용
+                /*
+                 대부분 String, selection, content 적혀있는 Picker만 사용함
+                 selection: what I want to change -> $draft.destination
+                 Picker의 content는 대부분 ForEach 사용
+                 tag()는 리스트 여러개 중에서 고르면, 그 고른 것을 그대로 selection: 에 넣어버림
+                 !!그러므로!! selection:의 변수와, tag() 안의 변수는 같은 type이어야 함!!! (as this binding is bound to, 33:57초)
+                 State: Bool value
+                 $State: Binding<Bool> value
+                 
+                 밑의 예시를 보면 $draft.destination에서 destination은 var destination: String로 스트링
+                 allAirports.codes도 var codes: [String]으로 같은 스트링임, 그러므로 No Error
+                */
                 Picker("Destination", selection: $draft.destination) {
                     ForEach(allAirports.codes, id: \.self) { airport in
                         Text("\(self.allAirports[airport]?.friendlyName ?? airport)").tag(airport)
                     }
                 }
                 Picker("Origin", selection: $draft.origin) {
-                    Text("Any").tag(String?.none)
+                    Text("Any").tag(String?.none) // 그냥 .tag(nil) 쓸 수 없는 이유는, 이게 String nil인지 확실하지 않아서임
+                    
+                    // var origin: String? 오리진은 optional value임 그러므로 tag에도 옵셔널이 들어가야함, 고로 (airport: String?) 이렇게 선언해주기
                     ForEach(allAirports.codes, id: \.self) { (airport: String?) in
                         Text("\(self.allAirports[airport]?.friendlyName ?? airport ?? "Any")").tag(airport)
+                        // ?? 써주는게 unwrapped 해주는거임
                     }
                 }
                 Picker("Airline", selection: $draft.airline) {
