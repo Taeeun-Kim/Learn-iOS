@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// 여기에 해당하는 조건들만 검색
 struct FlightSearch {
     var destination: String
     var origin: String?
@@ -29,9 +30,12 @@ struct FlightsEnrouteView: View {
     
     var filter: some View {
         Button("Filter") {
-            self.showFilter = true
+            self.showFilter = true // Bool 함수 true/false 바로 넣어주기 네이밍은 show+Filter 이런식으로, 그리고 바로위에 변수 선언 해주기 -> @State private var showFilter = false 기본 false로
         }
         .sheet(isPresented: $showFilter) {
+            // .sheet에는 isPresented: 에 Bool 변수 넣어주기 달러사인 필수
+            // 왜 $이냐면, 버튼을 누르고 true에서 sheet 화면에서 dismiss를 누르면 다시 false로 변해야하기 때문에
+            // 즉 읽기 쓰기 권한을 주기 위해
             FilterFlights(flightSearch: self.$flightSearch, isPresented: self.$showFilter)
         }
     }
@@ -47,6 +51,7 @@ struct FlightsEnrouteView: View {
 }
 
 struct FlightList: View {
+    // View Model
     @ObservedObject var flightFetcher: FlightFetcher
 
     init(_ flightSearch: FlightSearch) {
