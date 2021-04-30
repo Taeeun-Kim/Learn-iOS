@@ -14,7 +14,7 @@ struct FlightSearch {
     var origin: Airport?
     var airline: Airline?
     var inTheAir: Bool = true
-}
+} 
 
 extension FlightSearch {
     var predicate: NSPredicate {

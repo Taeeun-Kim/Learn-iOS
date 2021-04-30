@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  test
+//  DragGesture
 //
-//  Created by Taeeun Kim on 18.04.21.
+//  Created by Taeeun Kim on 30.04.21.
 //
 
 import UIKit
