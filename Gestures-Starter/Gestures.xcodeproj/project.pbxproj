@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5ACD6681263CA54600E0AF64 /* SequencedGesturesExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD6680263CA54600E0AF64 /* SequencedGesturesExample.swift */; };
+		5ACD6683263CA8AF00E0AF64 /* SequencedGesturesExample2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD6682263CA8AF00E0AF64 /* SequencedGesturesExample2.swift */; };
 		BB7E6B7F24993EFE00D3FDDD /* MagnificationGestureExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7E6B7E24993EFE00D3FDDD /* MagnificationGestureExample.swift */; };
 		BB9789982499630500CB53D2 /* RotationGestureExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9789972499630500CB53D2 /* RotationGestureExample.swift */; };
 		BBDBFD952497E7FC0081F3B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDBFD942497E7FC0081F3B5 /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5ACD6680263CA54600E0AF64 /* SequencedGesturesExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencedGesturesExample.swift; sourceTree = "<group>"; };
+		5ACD6682263CA8AF00E0AF64 /* SequencedGesturesExample2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencedGesturesExample2.swift; sourceTree = "<group>"; };
 		BB7E6B7E24993EFE00D3FDDD /* MagnificationGestureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificationGestureExample.swift; sourceTree = "<group>"; };
 		BB9789972499630500CB53D2 /* RotationGestureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureExample.swift; sourceTree = "<group>"; };
 		BBDBFD912497E7FC0081F3B5 /* Gestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +81,8 @@
 				BBDBFDB02498480B0081F3B5 /* DragGestureExample2.swift */,
 				BB7E6B7E24993EFE00D3FDDD /* MagnificationGestureExample.swift */,
 				BB9789972499630500CB53D2 /* RotationGestureExample.swift */,
+				5ACD6680263CA54600E0AF64 /* SequencedGesturesExample.swift */,
+				5ACD6682263CA8AF00E0AF64 /* SequencedGesturesExample2.swift */,
 				BBDBFD9A2497E7FD0081F3B5 /* Assets.xcassets */,
 				BBDBFD9F2497E7FD0081F3B5 /* LaunchScreen.storyboard */,
 				BBDBFDA22497E7FD0081F3B5 /* Info.plist */,
@@ -168,7 +174,9 @@
 				BBDBFD952497E7FC0081F3B5 /* AppDelegate.swift in Sources */,
 				BBDBFD972497E7FC0081F3B5 /* SceneDelegate.swift in Sources */,
 				BBDBFDA924980CDE0081F3B5 /* TapGestureExample.swift in Sources */,
+				5ACD6681263CA54600E0AF64 /* SequencedGesturesExample.swift in Sources */,
 				BBDBFD992497E7FC0081F3B5 /* ContentView.swift in Sources */,
+				5ACD6683263CA8AF00E0AF64 /* SequencedGesturesExample2.swift in Sources */,
 				BB7E6B7F24993EFE00D3FDDD /* MagnificationGestureExample.swift in Sources */,
 				BBDBFDAD249836F30081F3B5 /* DragGestureExample.swift in Sources */,
 				BBDBFDAB24980D9E0081F3B5 /* LongPressGestureExample.swift in Sources */,
