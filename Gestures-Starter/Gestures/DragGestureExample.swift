@@ -9,11 +9,26 @@
 import SwiftUI
 
 struct DragGestureExample: View {
+    @State private var dragOffset: CGSize = .zero
+    @State private var position: CGSize = .zero
+    
     var body: some View {
+        
         Circle()
-            .fill(Color.red)
+            .fill(Color.yellow)
             .shadow(radius: 20)
             .frame(width: 100)
+            .offset(x: dragOffset.width + position.width, y: dragOffset.height + position.height)
+            .gesture(DragGesture()
+                        .onChanged({ value in
+                            self.dragOffset = value.translation
+                        })
+                        .onEnded({ value in
+                            self.position.width += value.translation.width
+                            self.position.height += value.translation.height
+                            self.dragOffset = .zero
+                        })
+            )
     }
 }
 
