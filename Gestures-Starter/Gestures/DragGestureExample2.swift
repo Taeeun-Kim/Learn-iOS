@@ -22,8 +22,9 @@ struct DragGestureExample2: View {
             Text("Hello World")
             
             Rectangle()
-                .fill(Color.blue)
+                .fill(Color.yellow)
                 .cornerRadius(30)
+                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
                 .offset(y: topOffset + dragOffset.height + position.height)
                 .gesture(DragGesture()
                             .onChanged({ self.dragOffset = $0.translation })
