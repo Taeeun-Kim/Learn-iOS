@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A7D0693268956F60075BFFF /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D0692268956F60075BFFF /* Movie.swift */; };
+		5A7D069526895B4B0075BFFF /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D069426895B4B0075BFFF /* HTTPClient.swift */; };
 		8D7ACB4124D1E4B100644453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7ACB4024D1E4B100644453 /* AppDelegate.swift */; };
 		8D7ACB4324D1E4B100644453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7ACB4224D1E4B100644453 /* SceneDelegate.swift */; };
 		8D7ACB4524D1E4B100644453 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7ACB4424D1E4B100644453 /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		5A7D0692268956F60075BFFF /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		5A7D069426895B4B0075BFFF /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		8D7ACB3D24D1E4B100644453 /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7ACB4024D1E4B100644453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D7ACB4224D1E4B100644453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		8D7ACB5924D1E50B00644453 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5A7D069426895B4B0075BFFF /* HTTPClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				8D7ACB5D24D1E54500644453 /* Rating.swift in Sources */,
 				8D7ACB6224D1E5A700644453 /* ImageLoader.swift in Sources */,
 				8D7ACB4124D1E4B100644453 /* AppDelegate.swift in Sources */,
+				5A7D069526895B4B0075BFFF /* HTTPClient.swift in Sources */,
 				8D7ACB4324D1E4B100644453 /* SceneDelegate.swift in Sources */,
 				5A7D0693268956F60075BFFF /* Movie.swift in Sources */,
 				8D7ACB4524D1E4B100644453 /* ContentView.swift in Sources */,
