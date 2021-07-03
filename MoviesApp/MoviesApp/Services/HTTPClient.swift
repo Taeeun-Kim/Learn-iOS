@@ -19,7 +19,7 @@ class HTTPClient {
     // @frozen enum Result<Success, Failure> where Failure : Error
     func getMoviesBy(search: String, completion: @escaping (Result<[Movie]?, NetworkError>) -> Void) {
         
-        guard let url = URL(string: "http://www.omdbapi.com/?s=\(search)&apikey=\(Constants.API_KEY)") else {
+        guard let url = URL.forMoviesByName(search) else {
             return completion(.failure(.badURL))
         }
         
