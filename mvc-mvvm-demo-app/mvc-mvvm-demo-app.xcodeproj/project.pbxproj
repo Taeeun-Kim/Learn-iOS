@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A52442226ECD00D004A9B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52442126ECD00D004A9B20 /* AppDelegate.swift */; };
+		5A52442426ECD00D004A9B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52442326ECD00D004A9B20 /* SceneDelegate.swift */; };
+		5A52442626ECD00D004A9B20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52442526ECD00D004A9B20 /* ViewController.swift */; };
+		5A52442926ECD00D004A9B20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A52442726ECD00D004A9B20 /* Main.storyboard */; };
+		5A52442B26ECD00D004A9B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A52442A26ECD00D004A9B20 /* Assets.xcassets */; };
+		5A52442E26ECD00D004A9B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A52442C26ECD00D004A9B20 /* LaunchScreen.storyboard */; };
 		5A8516E926ECC3FC000F796C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8516E826ECC3FC000F796C /* AppDelegate.swift */; };
 		5A8516EB26ECC3FC000F796C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8516EA26ECC3FC000F796C /* SceneDelegate.swift */; };
 		5A8516ED26ECC3FC000F796C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8516EC26ECC3FC000F796C /* ViewController.swift */; };
@@ -16,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A52441F26ECD00D004A9B20 /* mvvm-version.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm-version.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A52442126ECD00D004A9B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A52442326ECD00D004A9B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5A52442526ECD00D004A9B20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A52442826ECD00D004A9B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A52442A26ECD00D004A9B20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A52442D26ECD00D004A9B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A52442F26ECD00D004A9B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A8516E526ECC3FC000F796C /* mvc-mvvm-demo-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-mvvm-demo-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8516E826ECC3FC000F796C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A8516EA26ECC3FC000F796C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +41,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A52441C26ECD00D004A9B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A8516E226ECC3FC000F796C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +58,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A52442026ECD00D004A9B20 /* mvvm-version */ = {
+			isa = PBXGroup;
+			children = (
+				5A52442126ECD00D004A9B20 /* AppDelegate.swift */,
+				5A52442326ECD00D004A9B20 /* SceneDelegate.swift */,
+				5A52442526ECD00D004A9B20 /* ViewController.swift */,
+				5A52442726ECD00D004A9B20 /* Main.storyboard */,
+				5A52442A26ECD00D004A9B20 /* Assets.xcassets */,
+				5A52442C26ECD00D004A9B20 /* LaunchScreen.storyboard */,
+				5A52442F26ECD00D004A9B20 /* Info.plist */,
+			);
+			path = "mvvm-version";
+			sourceTree = "<group>";
+		};
 		5A8516DC26ECC3FC000F796C = {
 			isa = PBXGroup;
 			children = (
 				5A8516E726ECC3FC000F796C /* mvc-mvvm-demo-app */,
+				5A52442026ECD00D004A9B20 /* mvvm-version */,
 				5A8516E626ECC3FC000F796C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5A8516E526ECC3FC000F796C /* mvc-mvvm-demo-app.app */,
+				5A52441F26ECD00D004A9B20 /* mvvm-version.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +107,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5A52441E26ECD00D004A9B20 /* mvvm-version */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A52443226ECD00D004A9B20 /* Build configuration list for PBXNativeTarget "mvvm-version" */;
+			buildPhases = (
+				5A52441B26ECD00D004A9B20 /* Sources */,
+				5A52441C26ECD00D004A9B20 /* Frameworks */,
+				5A52441D26ECD00D004A9B20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mvvm-version";
+			productName = "mvvm-version";
+			productReference = 5A52441F26ECD00D004A9B20 /* mvvm-version.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5A8516E426ECC3FC000F796C /* mvc-mvvm-demo-app */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A8516F926ECC3FE000F796C /* Build configuration list for PBXNativeTarget "mvc-mvvm-demo-app" */;
@@ -96,6 +150,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					5A52441E26ECD00D004A9B20 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					5A8516E426ECC3FC000F796C = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -115,11 +172,22 @@
 			projectRoot = "";
 			targets = (
 				5A8516E426ECC3FC000F796C /* mvc-mvvm-demo-app */,
+				5A52441E26ECD00D004A9B20 /* mvvm-version */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A52441D26ECD00D004A9B20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A52442E26ECD00D004A9B20 /* LaunchScreen.storyboard in Resources */,
+				5A52442B26ECD00D004A9B20 /* Assets.xcassets in Resources */,
+				5A52442926ECD00D004A9B20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A8516E326ECC3FC000F796C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +201,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A52441B26ECD00D004A9B20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A52442626ECD00D004A9B20 /* ViewController.swift in Sources */,
+				5A52442226ECD00D004A9B20 /* AppDelegate.swift in Sources */,
+				5A52442426ECD00D004A9B20 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A8516E126ECC3FC000F796C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +224,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5A52442726ECD00D004A9B20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A52442826ECD00D004A9B20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A52442C26ECD00D004A9B20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A52442D26ECD00D004A9B20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		5A8516EE26ECC3FC000F796C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -165,6 +259,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5A52443026ECD00D004A9B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P87BGS4HZC;
+				INFOPLIST_FILE = "mvvm-version/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Taeeun-Kim.mvvm-version";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A52443126ECD00D004A9B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P87BGS4HZC;
+				INFOPLIST_FILE = "mvvm-version/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Taeeun-Kim.mvvm-version";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5A8516F726ECC3FE000F796C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,6 +454,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A52443226ECD00D004A9B20 /* Build configuration list for PBXNativeTarget "mvvm-version" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A52443026ECD00D004A9B20 /* Debug */,
+				5A52443126ECD00D004A9B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5A8516E026ECC3FC000F796C /* Build configuration list for PBXProject "mvc-mvvm-demo-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
