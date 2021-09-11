@@ -8,10 +8,13 @@
 import Foundation
 
 final class AuthManager {
-    // AuthManager().isSignedIn으로도 사용 가능
-    // 하지만 "'AuthManager' initializer is inaccessible due to 'private' protection level"
-    // 그렇기에 shared를 이용해서 접근
+    // Singleton
     static let shared = AuthManager()
+    
+    struct Constants {
+        static let clientId = "4d03d8b9b0024330aac97bb97cccb041"
+        static let clientSecret = "6e4b80c9c2a443cab935c59fe4560c42"
+    }
     
     private init() {}
     

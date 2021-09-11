@@ -115,7 +115,6 @@
 			children = (
 				5AE900E026CCFDE8000008EB /* Resources */,
 				5AE900DE26CCFDDE000008EB /* Managers */,
-				5AE900DD26CCFDD9000008EB /* ViewModels */,
 				5AE900DC26CCFDD3000008EB /* Models */,
 				5AE900DB26CCFDCD000008EB /* View */,
 				5AE900DF26CCFDE3000008EB /* Controllers */,
@@ -141,13 +140,6 @@
 				5ACF890A26CEA3BA00149A4C /* UserProfile.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		5AE900DD26CCFDD9000008EB /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		5AE900DE26CCFDDE000008EB /* Managers */ = {
