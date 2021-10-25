@@ -19,11 +19,11 @@ class MovieListViewModel: ObservableObject {
         httpClient.getMoviesBy(search: name) { result in
             switch result {
             case: .success(let movies):
-                if let movies = movies {
-                    self.movies = movies.map(MovieViewModel.init)
-                }
+//                if let movies = movies {
+//                    self.movies = movies.map(MovieViewModel.init)
+//                }
             case: .failure(let error):
-                print(error.localizedDescription)
+//                print(error.localizedDescription)
             }
         }
     }
