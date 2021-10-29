@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A0F340B272CA368003A444D /* AccountSummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F340A272CA368003A444D /* AccountSummaryScreen.swift */; };
+		5A0F340D272CA84A003A444D /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F340C272CA84A003A444D /* AccountListView.swift */; };
 		5A9DA44227289B0F003442F3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA44127289B0F003442F3 /* Account.swift */; };
 		5A9DA44427289BDD003442F3 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA44327289BDD003442F3 /* AccountService.swift */; };
 		5A9DA44627289E4F003442F3 /* AccountSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA44527289E4F003442F3 /* AccountSummaryViewModel.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		5A0F340A272CA368003A444D /* AccountSummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryScreen.swift; sourceTree = "<group>"; };
+		5A0F340C272CA84A003A444D /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
 		5A9DA44127289B0F003442F3 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		5A9DA44327289BDD003442F3 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		5A9DA44527289E4F003442F3 /* AccountSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewModel.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		8D40C33F24E1C4CE0040822F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5A0F340C272CA84A003A444D /* AccountListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				8D40C32324E1C4080040822F /* AppDelegate.swift in Sources */,
 				5A0F340B272CA368003A444D /* AccountSummaryScreen.swift in Sources */,
 				8D40C33A24E1C4640040822F /* URL+Extensions.swift in Sources */,
+				5A0F340D272CA84A003A444D /* AccountListView.swift in Sources */,
 				8D40C32524E1C4080040822F /* SceneDelegate.swift in Sources */,
 				8D40C33C24E1C4820040822F /* View+Extensions.swift in Sources */,
 				5A9DA44627289E4F003442F3 /* AccountSummaryViewModel.swift in Sources */,
