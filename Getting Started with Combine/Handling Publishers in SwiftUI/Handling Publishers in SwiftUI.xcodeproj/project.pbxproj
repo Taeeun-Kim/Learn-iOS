@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1D0342273087F000425B95 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D0341273087F000425B95 /* ContactsViewModel.swift */; };
 		64769A96262D61FD008FC75A /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64769A95262D61FD008FC75A /* ContactsView.swift */; };
 		64769A9A262D64A0008FC75A /* AddContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64769A99262D64A0008FC75A /* AddContactsView.swift */; };
 		64769A9E262D6536008FC75A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64769A9D262D6536008FC75A /* Contact.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A1D0341273087F000425B95 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		64769A95262D61FD008FC75A /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		64769A99262D64A0008FC75A /* AddContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactsView.swift; sourceTree = "<group>"; };
 		64769A9D262D6536008FC75A /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A1D0340273087E700425B95 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A1D0341273087F000425B95 /* ContactsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		64769A90262D61C9008FC75A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 		64F9775026261BC000103463 /* Handling Publishers in SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				5A1D0340273087E700425B95 /* ViewModel */,
 				64769A9C262D6524008FC75A /* Model */,
 				64769A90262D61C9008FC75A /* Views */,
 				64F9775126261BC000103463 /* Handling_Publishers_in_SwiftUIApp.swift */,
@@ -164,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64769A9E262D6536008FC75A /* Contact.swift in Sources */,
+				5A1D0342273087F000425B95 /* ContactsViewModel.swift in Sources */,
 				64769AA7262D6DF4008FC75A /* ContactView.swift in Sources */,
 				64769A96262D61FD008FC75A /* ContactsView.swift in Sources */,
 				64769A9A262D64A0008FC75A /* AddContactsView.swift in Sources */,
@@ -297,6 +309,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Handling Publishers in SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = P87BGS4HZC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Handling Publishers in SwiftUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -318,6 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Handling Publishers in SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = P87BGS4HZC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Handling Publishers in SwiftUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

@@ -13,3 +13,11 @@ func filterNils(in items: [String?]) -> [String] {
 }
 
 print(filterNils(in: items))
+//print(items.compactMap { $0 })
+
+let combined = items
+    .compactMap { $0 }
+    .map { $0 }
+    .joined(separator: ", ")
+
+print(combined)

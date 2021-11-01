@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddContactsView: View {
     
+    @StateObject var viewModel: ContactsViewModel
     @Binding var isPresented: Bool
     @State var newContact = Contact(name: "",
                                     occupation: "",
@@ -39,6 +40,7 @@ struct AddContactsView: View {
                 Text("Cancel")
             }), trailing: Button(action: {
                 isPresented = false
+                viewModel.add(contact: newContact)
             }, label: {
                 Text("Add")
             }))
@@ -48,6 +50,6 @@ struct AddContactsView: View {
 
 struct AddContactsView_Previews: PreviewProvider {
     static var previews: some View {
-        AddContactsView(isPresented: .constant(false))
+        AddContactsView(viewModel: ContactsViewModel(), isPresented: .constant(false))
     }
 }

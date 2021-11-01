@@ -10,6 +10,7 @@ import SwiftUI
 struct ContactsView: View {
     
     @State private var isPresented = false
+    @StateObject private var viewModel = ContactsViewModel()
     
     var body: some View {
         
@@ -17,15 +18,26 @@ struct ContactsView: View {
             
             VStack {
                 
-                Text("No Contacts")
-                    .font(.system(size: 16,
-                                  weight: .bold))
-                Text("It seems that there are no contacts, why don't you add some above")
-                    .multilineTextAlignment(.center)
-                    .font(.system(size: 13,
-                                  weight: .regular))
-                    .padding(.horizontal, 16)
-                    .padding(.top, 4)
+                if viewModel.contacts.isEmpty {
+                    Text("No Contacts")
+                        .font(.system(size: 16,
+                                      weight: .bold))
+                    Text("It seems that there are no contacts, why don't you add some above")
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: 13,
+                                      weight: .regular))
+                        .padding(.horizontal, 16)
+                        .padding(.top, 4)
+                } else {
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.flexible())], spacing: 8) {
+                            ForEach(viewModel.contacts) { contact in
+                                ContactView(contact: contact)
+                            }
+                        }
+                    }
+                }
+                
                 
             }
             .navigationTitle("Contacts")
@@ -36,7 +48,7 @@ struct ContactsView: View {
             }))
             .sheet(isPresented: $isPresented,
                    content: {
-                    AddContactsView(isPresented: $isPresented)
+                AddContactsView(viewModel: viewModel, isPresented: $isPresented)
             })
         }
     }
