@@ -15,7 +15,7 @@ struct AccountSummaryScreen: View {
     var body: some View {
         VStack {
             AccountListView(accounts: accountSummaryVM.accounts)
-            Text("\(accountSummaryVM.total)")
+            Text("\(accountSummaryVM.total.formatAsCurrency())")
         }
         .onAppear {
             self.accountSummaryVM.getAllAccounts()
