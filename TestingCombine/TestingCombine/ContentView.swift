@@ -8,7 +8,10 @@
 import SwiftUI
 
 // Models
-struct User: Decodable
+struct User: Decodable, Identifiable {
+    let id: Int
+    let name: String
+}
 
 // ViewModels
 import Combine
@@ -16,7 +19,9 @@ import Combine
 final class ViewModel: ObservableObject {
     
     @Published var time = ""
-    private var anyCancellable: AnyCancellable?
+    @Published var users = [User]()
+    
+    private var cancellables = Set<AnyCancellable>()
     
     let formatter: DateFormatter = {
         let df = DateFormatter()
@@ -31,6 +36,7 @@ final class ViewModel: ObservableObject {
     
     private func setupPublishers() {
         setupTimerPublisher()
+        setupDataTaskPublisher()
     }
     
     private func setupDataTaskPublisher() {
@@ -42,15 +48,23 @@ final class ViewModel: ObservableObject {
                 }
                 return data
             }
+            .decode(type: [User].self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .sink { _ in } receiveValue: { users in
+                self.users = users
+            }
+            .store(in: &cancellables)
+
     }
     
     private func setupTimerPublisher() {
-        anyCancellable = Timer.publish(every: 1, on: .main, in: .default)
+        Timer.publish(every: 1, on: .main, in: .default)
             .autoconnect()
             .receive(on: RunLoop.main)
             .sink { value in
                 self.time = self.formatter.string(from: value)
             }
+            .store(in: &cancellables)
     }
 }
 
@@ -58,8 +72,13 @@ struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     
     var body: some View {
-        Text(viewModel.time)
-            .padding()
+        VStack {
+            Text(viewModel.time)
+                .padding()
+            List(viewModel.users) { user in
+                Text(user.name)
+            }
+        }
     }
 }
 
