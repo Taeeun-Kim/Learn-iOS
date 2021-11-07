@@ -19,7 +19,6 @@
 		4403BBE62738741800788687 /* ToDoFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403BBE52738741800788687 /* ToDoFormViewModel.swift */; };
 		4403BBE82738751200788687 /* ToDoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403BBE72738751200788687 /* ToDoFormView.swift */; };
 		4403BBEA2738774F00788687 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403BBE92738774F00788687 /* ModelType.swift */; };
-		4489E18227388B0600B23F21 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489E18127388B0600B23F21 /* FileManager+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +54,6 @@
 		4403BBE52738741800788687 /* ToDoFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoFormViewModel.swift; sourceTree = "<group>"; };
 		4403BBE72738751200788687 /* ToDoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoFormView.swift; sourceTree = "<group>"; };
 		4403BBE92738774F00788687 /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
-		4489E18127388B0600B23F21 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +108,6 @@
 				4403BBEC2738799F00788687 /* Models */,
 				4403BBEB2738799A00788687 /* Views */,
 				4403BBED273879A400788687 /* ViewModels */,
-				4489E18027388AE700B23F21 /* Extensions */,
 				4403BBBB27386E2200788687 /* Assets.xcassets */,
 				4403BBBD27386E2200788687 /* Preview Content */,
 			);
@@ -167,14 +164,6 @@
 				4403BBE32738701E00788687 /* DataStore.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		4489E18027388AE700B23F21 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4489E18127388B0600B23F21 /* FileManager+Extension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4403BBE82738751200788687 /* ToDoFormView.swift in Sources */,
-				4489E18227388B0600B23F21 /* FileManager+Extension.swift in Sources */,
 				4403BBE227386E4E00788687 /* ToDo.swift in Sources */,
 				4403BBE42738701E00788687 /* DataStore.swift in Sources */,
 				4403BBBA27386E2000788687 /* ContentView.swift in Sources */,
