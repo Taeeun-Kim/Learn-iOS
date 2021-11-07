@@ -18,6 +18,7 @@
 		4403BBE42738701E00788687 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403BBE32738701E00788687 /* DataStore.swift */; };
 		4403BBE62738741800788687 /* ToDoFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403BBE52738741800788687 /* ToDoFormViewModel.swift */; };
 		4403BBE82738751200788687 /* ToDoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403BBE72738751200788687 /* ToDoFormView.swift */; };
+		4403BBEA2738774F00788687 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403BBE92738774F00788687 /* ModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		4403BBE32738701E00788687 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		4403BBE52738741800788687 /* ToDoFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoFormViewModel.swift; sourceTree = "<group>"; };
 		4403BBE72738751200788687 /* ToDoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoFormView.swift; sourceTree = "<group>"; };
+		4403BBE92738774F00788687 /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				4403BBB727386E2000788687 /* CombineToDoListApp.swift */,
-				4403BBB927386E2000788687 /* ContentView.swift */,
+				4403BBEC2738799F00788687 /* Models */,
+				4403BBEB2738799A00788687 /* Views */,
+				4403BBED273879A400788687 /* ViewModels */,
 				4403BBBB27386E2200788687 /* Assets.xcassets */,
 				4403BBBD27386E2200788687 /* Preview Content */,
-				4403BBE127386E4E00788687 /* ToDo.swift */,
-				4403BBE32738701E00788687 /* DataStore.swift */,
-				4403BBE52738741800788687 /* ToDoFormViewModel.swift */,
-				4403BBE72738751200788687 /* ToDoFormView.swift */,
 			);
 			path = CombineToDoList;
 			sourceTree = "<group>";
@@ -137,6 +137,33 @@
 				4403BBD427386E2200788687 /* CombineToDoListUITestsLaunchTests.swift */,
 			);
 			path = CombineToDoListUITests;
+			sourceTree = "<group>";
+		};
+		4403BBEB2738799A00788687 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4403BBB927386E2000788687 /* ContentView.swift */,
+				4403BBE72738751200788687 /* ToDoFormView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4403BBEC2738799F00788687 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4403BBE127386E4E00788687 /* ToDo.swift */,
+				4403BBE92738774F00788687 /* ModelType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4403BBED273879A400788687 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4403BBE52738741800788687 /* ToDoFormViewModel.swift */,
+				4403BBE32738701E00788687 /* DataStore.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +300,7 @@
 				4403BBE227386E4E00788687 /* ToDo.swift in Sources */,
 				4403BBE42738701E00788687 /* DataStore.swift in Sources */,
 				4403BBBA27386E2000788687 /* ContentView.swift in Sources */,
+				4403BBEA2738774F00788687 /* ModelType.swift in Sources */,
 				4403BBB827386E2000788687 /* CombineToDoListApp.swift in Sources */,
 				4403BBE62738741800788687 /* ToDoFormViewModel.swift in Sources */,
 			);
