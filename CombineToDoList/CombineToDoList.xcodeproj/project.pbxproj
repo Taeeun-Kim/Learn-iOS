@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440384D72740923D0077BAEE /* ToDoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440384D62740923D0077BAEE /* ToDoError.swift */; };
 		4403BBB827386E2000788687 /* CombineToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403BBB727386E2000788687 /* CombineToDoListApp.swift */; };
 		4403BBBA27386E2000788687 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403BBB927386E2000788687 /* ContentView.swift */; };
 		4403BBBC27386E2200788687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4403BBBB27386E2200788687 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440384D62740923D0077BAEE /* ToDoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoError.swift; sourceTree = "<group>"; };
 		4403BBB427386E2000788687 /* CombineToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4403BBB727386E2000788687 /* CombineToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineToDoListApp.swift; sourceTree = "<group>"; };
 		4403BBB927386E2000788687 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				4403BBE127386E4E00788687 /* ToDo.swift */,
 				4403BBE92738774F00788687 /* ModelType.swift */,
+				440384D62740923D0077BAEE /* ToDoError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				4403BBE42738701E00788687 /* DataStore.swift in Sources */,
 				4403BBBA27386E2000788687 /* ContentView.swift in Sources */,
 				4403BBEA2738774F00788687 /* ModelType.swift in Sources */,
+				440384D72740923D0077BAEE /* ToDoError.swift in Sources */,
 				4403BBB827386E2000788687 /* CombineToDoListApp.swift in Sources */,
 				4403BBE62738741800788687 /* ToDoFormViewModel.swift in Sources */,
 			);
