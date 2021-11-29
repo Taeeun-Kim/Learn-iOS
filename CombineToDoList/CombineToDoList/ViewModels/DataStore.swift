@@ -26,6 +26,14 @@ class DataStore: ObservableObject {
     }
     
     func addSubscriptions() {
+        $toDos
+            .subscribe(on: DispatchQueue(label: "background queue"))
+            .receive(on: DispatchQueue.main)
+            .encode(encoder: JSONEncoder)
+            .tryMap { data in
+                try data.write(to: FileManager)
+            }
+        
         addToDo
             .sink { [unowned self] toDo in
                 toDos.append(toDo)
