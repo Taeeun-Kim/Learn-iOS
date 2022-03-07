@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSoup
 
 struct ContentView: View {
     
@@ -13,10 +14,20 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("gazua")
+            TextField("Type here: ", text: $vm.search)
+                .padding()
+            
+            Button {
+                vm.start()
+            } label: {
+                Text("Enter")
+                    .font(.headline)
+            }
+
+            Text("\(vm.jobCount)")
         }
         .onAppear {
-            vm.crawl()
+            vm.start()
         }
     }
 }
@@ -30,57 +41,27 @@ struct ContentView_Previews: PreviewProvider {
 class IndeedViewModel: ObservableObject {
     
     @Published var jobCount: String = ""
+    @Published var search: String = "chemie"
     
-    let wordToSearch = "Seite 1 von "
-    let maximumPagesToVisit = 10
+    let baseURL = "https://de.indeed.com/jobs?q="
     
-    let semaphore = DispatchSemaphore(value: 0)
-    var visitedPages: Set<URL> = []
-    var pagesToVisit: Set<URL> = [URL(string: "https://de.indeed.com/jobs?q=ios")!]
-    
-    func crawl() {
-        guard visitedPages.count <= maximumPagesToVisit else {
-            print("🏁 Reached max number of pages to visit")
-            semaphore.signal()
-            return
-        }
-        guard let pageToVisit = pagesToVisit.popFirst() else {
-            print("🏁 No more pages to visit")
-            semaphore.signal()
-            return
-        }
-        if visitedPages.contains(pageToVisit) {
-            crawl()
-        } else {
-            visit(page: pageToVisit)
-        }
-    }
-    
-    func visit(page url: URL) {
-        visitedPages.insert(url)
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            defer { self.crawl() }
+    func start() {
+        let editedURL = baseURL + search
+        let task = URLSession.shared.dataTask(with: URL(string: editedURL)!) { data, response, error in
             guard
                 let data = data,
                 error == nil,
                 let document = String(data: data, encoding: .utf8) else { return }
-            self.parse(document: document, url: url)
-        }
-        
-        print("🔎 Visiting page: \(url)")
-        task.resume()
-    }
-    
-    func parse(document: String, url: URL) {
-        func find(word: String) {
-            if document.contains(word) {
-                print("✅ Word '\(word)' found at page \(url)")
+            do {
+                let html: String = document
+                let doc: Document = try SwiftSoup.parseBodyFragment(html)
+                let searchCountPages = try doc.getElementById("searchCountPages")
+
+                self.jobCount = try searchCountPages?.text() ?? ""
+            } catch {
+                print("error")
             }
         }
-        find(word: wordToSearch)
+        task.resume()
     }
-    
-    //    crawl()
-    //    semaphore.wait()
 }
