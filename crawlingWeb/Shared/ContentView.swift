@@ -34,94 +34,34 @@ struct ContentView_Previews: PreviewProvider {
 class IndeedViewModel: ObservableObject {
     
     private var cancellable: AnyCancellable?
-    let links = ["https://de.indeed.com/jobs?q=swift", "https://de.indeed.com/jobs?q=react", "https://de.indeed.com/jobs?q=flutter"]
+    let links = [
+        URL(string: "https://de.indeed.com/jobs?q=swift")!,
+        URL(string: "https://de.indeed.com/jobs?q=react")!,
+        URL(string: "https://de.indeed.com/jobs?q=flutter")!,
+        URL(string: "https://de.indeed.com/jobs?q=python")!,
+        URL(string: "https://de.indeed.com/jobs?q=java")!,
+        URL(string: "https://de.indeed.com/jobs?q=javascript")!
+    ]
     
     @Published var jobCount: [String] = []
     
     func start() {
         
-        TaskManager.shared.dataTask(with: URL(string: links[0])!) { (data, response, error) in
-            let html = String(data: data ?? Data(), encoding: .utf8) ?? ""
-            let doc: Document = try! SwiftSoup.parseBodyFragment(html)
-            let searchCountPages = try! doc.getElementById("searchCountPages")
+        for link in links {
+            TaskManager.shared.dataTask(with: link) { (data, response, error) in
+                let html = String(data: data ?? Data(), encoding: .utf8) ?? ""
+                let doc: Document = try! SwiftSoup.parseBodyFragment(html)
+                let searchCountPages = try! doc.getElementById("searchCountPages")
 
-            let str = try! searchCountPages?.text() ?? ""
-            let start = str.index(str.startIndex, offsetBy: 12)
-            let end = str.index(str.endIndex, offsetBy: -5)
-            let range = start..<end
-            let test = String(str[range])
+                let str = try! searchCountPages?.text() ?? ""
+                let start = str.index(str.startIndex, offsetBy: 12)
+                let end = str.index(str.endIndex, offsetBy: -5)
+                let range = start..<end
+                let test = String(str[range])
 
-            self.jobCount.append(test)
+                self.jobCount.append(test)
+            }
         }
-        
-        TaskManager.shared.dataTask(with: URL(string: links[1])!) { (data, response, error) in
-            let html = String(data: data ?? Data(), encoding: .utf8) ?? ""
-            let doc: Document = try! SwiftSoup.parseBodyFragment(html)
-            let searchCountPages = try! doc.getElementById("searchCountPages")
-
-            let str = try! searchCountPages?.text() ?? ""
-            let start = str.index(str.startIndex, offsetBy: 12)
-            let end = str.index(str.endIndex, offsetBy: -5)
-            let range = start..<end
-            let test = String(str[range])
-
-            self.jobCount.append(test)
-        }
-        
-        TaskManager.shared.dataTask(with: URL(string: links[2])!) { (data, response, error) in
-            let html = String(data: data ?? Data(), encoding: .utf8) ?? ""
-            let doc: Document = try! SwiftSoup.parseBodyFragment(html)
-            let searchCountPages = try! doc.getElementById("searchCountPages")
-
-            let str = try! searchCountPages?.text() ?? ""
-            let start = str.index(str.startIndex, offsetBy: 12)
-            let end = str.index(str.endIndex, offsetBy: -5)
-            let range = start..<end
-            let test = String(str[range])
-
-            self.jobCount.append(test)
-        }
-        
-//        let pub1 = URLSession.shared.dataTaskPublisher(for: URL(string: links[0])!)
-//            .map { $0.data }
-//        let pub2 = URLSession.shared.dataTaskPublisher(for: URL(string: links[1])!)
-//            .map { $0.data }
-//
-//        cancellable = Publishers.Zip(pub1, pub2)
-//            .receive(on: DispatchQueue.main)
-//            .eraseToAnyPublisher()
-//            .sink(receiveCompletion: { completion in
-//                switch completion {
-//                case .finished:
-//                    break
-//                case .failure(let error):
-//                    fatalError(error.localizedDescription)
-//                }
-//            }, receiveValue: { go in
-//                let html = String(data: go.0, encoding: .utf8) ?? ""
-//                let doc: Document = try! SwiftSoup.parseBodyFragment(html)
-//                let searchCountPages = try! doc.getElementById("searchCountPages")
-//
-//                let str = try! searchCountPages?.text() ?? ""
-//                let start = str.index(str.startIndex, offsetBy: 12)
-//                let end = str.index(str.endIndex, offsetBy: -5)
-//                let range = start..<end
-//                let test = String(str[range])
-//
-//                self.jobCount.append(test)
-//
-//                let html2 = String(data: go.1, encoding: .utf8) ?? ""
-//                let doc2: Document = try! SwiftSoup.parseBodyFragment(html2)
-//                let searchCountPages2 = try! doc2.getElementById("searchCountPages")
-//
-//                let str2 = try! searchCountPages2?.text() ?? ""
-//                let start2 = str2.index(str2.startIndex, offsetBy: 12)
-//                let end2 = str2.index(str2.endIndex, offsetBy: -5)
-//                let range2 = start2..<end2
-//                let test2 = String(str2[range2])
-//
-//                self.jobCount.append(test2)
-//            })
     }
 }
 
