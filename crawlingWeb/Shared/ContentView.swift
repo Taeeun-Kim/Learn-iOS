@@ -13,14 +13,23 @@ struct ContentView: View {
     
     @StateObject var vm = IndeedViewModel()
     
+    let people = ["Taeeun", "Jessica", "Estelle"]
+    let photos = ["flower", "flower", "Tisch", "Toy"]
+
     var body: some View {
         VStack {
-            ForEach(vm.jobCount, id: \.self) { go in
-                Text(go)
+            ForEach(photos, id: \.self) { photo in
+                Text(photo)
             }
-        }
-        .onAppear {
-            vm.start()
+            
+            Button {
+                photos.map { print($0) }
+//                photos.map { photo in
+//                    print(photo)
+//                }
+            } label: {
+                Text("Click")
+            }
         }
     }
 }
@@ -36,11 +45,14 @@ class IndeedViewModel: ObservableObject {
     private var cancellable: AnyCancellable?
     let links = [
         URL(string: "https://de.indeed.com/jobs?q=swift")!,
+        URL(string: "https://de.indeed.com/jobs?q=kotlin")!,
         URL(string: "https://de.indeed.com/jobs?q=react")!,
         URL(string: "https://de.indeed.com/jobs?q=flutter")!,
         URL(string: "https://de.indeed.com/jobs?q=python")!,
         URL(string: "https://de.indeed.com/jobs?q=java")!,
-        URL(string: "https://de.indeed.com/jobs?q=javascript")!
+        URL(string: "https://de.indeed.com/jobs?q=javascript")!,
+        URL(string: "https://de.indeed.com/jobs?q=ios")!,
+        URL(string: "https://de.indeed.com/jobs?q=android")!,
     ]
     
     @Published var jobCount: [String] = []
