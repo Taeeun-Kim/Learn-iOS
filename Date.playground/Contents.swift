@@ -15,14 +15,27 @@ import Foundation
 
 //let date = Date().timeIntervalSinceReferenceDate
 
-let past = Date().addingTimeInterval(-500000)
+let past = Date().addingTimeInterval(-50000)
 
-let differentBetweenPastAndNow = Date().addingTimeInterval(past.timeIntervalSinceNow)
+let differentBetweenPastAndNow = -Date().addingTimeInterval(past.timeIntervalSinceNow).timeIntervalSinceNow
 
-print(past)
-print(differentBetweenPastAndNow)
+//print(past)
 
 //print(Date().timeIntervalSince(date3))
 //
 //let ago = Date().timeIntervalSince(date3)
+
+let minutes = Int(differentBetweenPastAndNow) / 60 // 초 -> 분
+
+print(minutes)
+
+let hours = minutes / 60 // 분 -> 시간
+let hours2 = minutes % 60 // 분 -> 시간
+
+print(hours)
+print(hours2)
+
+let days = hours / 24 // 시간 -> 일수
+
+print(days)
 
