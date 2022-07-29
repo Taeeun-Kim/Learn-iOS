@@ -11,6 +11,7 @@
 		44448EDB28948C9F00CFD2F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44448EDA28948C9F00CFD2F1 /* ContentView.swift */; };
 		44448EDD28948C9F00CFD2F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44448EDC28948C9F00CFD2F1 /* Assets.xcassets */; };
 		44448EE028948C9F00CFD2F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44448EDF28948C9F00CFD2F1 /* Preview Assets.xcassets */; };
+		44448EE928948CFB00CFD2F1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44448EE828948CFB00CFD2F1 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		44448EDA28948C9F00CFD2F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		44448EDC28948C9F00CFD2F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44448EDF28948C9F00CFD2F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		44448EE828948CFB00CFD2F1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		44448ED728948C9F00CFD2F1 /* FindNearbyLandmarks */ = {
 			isa = PBXGroup;
 			children = (
+				44448EE728948CEF00CFD2F1 /* Managers */,
+				44448EE628948CEB00CFD2F1 /* Services */,
 				44448ED828948C9F00CFD2F1 /* FindNearbyLandmarksApp.swift */,
 				44448EDA28948C9F00CFD2F1 /* ContentView.swift */,
 				44448EDC28948C9F00CFD2F1 /* Assets.xcassets */,
@@ -65,6 +69,21 @@
 				44448EDF28948C9F00CFD2F1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		44448EE628948CEB00CFD2F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		44448EE728948CEF00CFD2F1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				44448EE828948CFB00CFD2F1 /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +158,7 @@
 			files = (
 				44448EDB28948C9F00CFD2F1 /* ContentView.swift in Sources */,
 				44448ED928948C9F00CFD2F1 /* FindNearbyLandmarksApp.swift in Sources */,
+				44448EE928948CFB00CFD2F1 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
