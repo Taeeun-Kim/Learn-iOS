@@ -1,13 +1,7 @@
 import UIKit
+import SwiftUI
+import Foundation
 
-var str = "Hello, I am Taeeun"
-var numbers = [1, 2, 3, 4]
-var names = ["Taeeun", "Max", "DK"]
+let gazua = "fqwojfwq"
 
-for index in 0..<numbers.count{
-    print(numbers[index])
-}
-
-names.forEach{
-    print($0)
-}
+print(gazua.capitalized)
