@@ -38,7 +38,8 @@ extension LocationManager: CLLocationManagerDelegate {
         case .denied:
             print("You have denied app to access location services.")
         case .authorizedAlways, .authorizedWhenInUse:
-            print("location")
+            guard let location = locationManager.location else { return }
+            region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25))
         @unknown default:
             break
         }
@@ -46,6 +47,14 @@ extension LocationManager: CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         checkAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25))
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

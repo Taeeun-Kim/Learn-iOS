@@ -12,6 +12,7 @@ struct FindNearbyLandmarksApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(LocalSearchService())
         }
     }
 }

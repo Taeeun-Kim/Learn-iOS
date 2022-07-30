@@ -13,6 +13,8 @@
 		44448EE028948C9F00CFD2F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44448EDF28948C9F00CFD2F1 /* Preview Assets.xcassets */; };
 		44448EE928948CFB00CFD2F1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44448EE828948CFB00CFD2F1 /* LocationManager.swift */; };
 		44448EEC2895528900CFD2F1 /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44448EEB2895528900CFD2F1 /* MKCoordinateRegion+Extensions.swift */; };
+		44448EEE2895CCA700CFD2F1 /* LocalSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44448EED2895CCA700CFD2F1 /* LocalSearchService.swift */; };
+		44448EF12895CE6400CFD2F1 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44448EF02895CE6400CFD2F1 /* Landmark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		44448EDF28948C9F00CFD2F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		44448EE828948CFB00CFD2F1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		44448EEB2895528900CFD2F1 /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
+		44448EED2895CCA700CFD2F1 /* LocalSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchService.swift; sourceTree = "<group>"; };
+		44448EF02895CE6400CFD2F1 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		44448ED728948C9F00CFD2F1 /* FindNearbyLandmarks */ = {
 			isa = PBXGroup;
 			children = (
+				44448EEF2895CE5D00CFD2F1 /* Models */,
 				44448EEA2895527100CFD2F1 /* Extensions */,
 				44448EE728948CEF00CFD2F1 /* Managers */,
 				44448EE628948CEB00CFD2F1 /* Services */,
@@ -77,6 +82,7 @@
 		44448EE628948CEB00CFD2F1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				44448EED2895CCA700CFD2F1 /* LocalSearchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -95,6 +101,14 @@
 				44448EEB2895528900CFD2F1 /* MKCoordinateRegion+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		44448EEF2895CE5D00CFD2F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44448EF02895CE6400CFD2F1 /* Landmark.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +183,10 @@
 			files = (
 				44448EDB28948C9F00CFD2F1 /* ContentView.swift in Sources */,
 				44448EEC2895528900CFD2F1 /* MKCoordinateRegion+Extensions.swift in Sources */,
+				44448EEE2895CCA700CFD2F1 /* LocalSearchService.swift in Sources */,
 				44448ED928948C9F00CFD2F1 /* FindNearbyLandmarksApp.swift in Sources */,
 				44448EE928948CFB00CFD2F1 /* LocationManager.swift in Sources */,
+				44448EF12895CE6400CFD2F1 /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +318,8 @@
 				DEVELOPMENT_TEAM = P87BGS4HZC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -331,6 +349,8 @@
 				DEVELOPMENT_TEAM = P87BGS4HZC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
