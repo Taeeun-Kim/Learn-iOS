@@ -61,9 +61,9 @@
 		44448ED728948C9F00CFD2F1 /* FindNearbyLandmarks */ = {
 			isa = PBXGroup;
 			children = (
+				44448EEA2895527100CFD2F1 /* Extensions */,
 				44A9EFB02897102D002EFB11 /* Views */,
 				44448EEF2895CE5D00CFD2F1 /* Models */,
-				44448EEA2895527100CFD2F1 /* Extensions */,
 				44448EE728948CEF00CFD2F1 /* Managers */,
 				44448EE628948CEB00CFD2F1 /* Services */,
 				44448ED828948C9F00CFD2F1 /* FindNearbyLandmarksApp.swift */,

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct LandmarkListView: View {
     
@@ -18,6 +19,13 @@ struct LandmarkListView: View {
                     Text(landmark.name)
                     Text(landmark.title)
                         .opacity(0.5)
+                }
+                .listRowBackground(localSearchService.landmark == landmark ? Color(UIColor.lightGray) : Color.white)
+                .onTapGesture {
+                    localSearchService.landmark = landmark
+                    withAnimation {
+                        localSearchService.region = MKCoordinateRegion.regionFromLandmark(landmark)
+                    }
                 }
             }
         }

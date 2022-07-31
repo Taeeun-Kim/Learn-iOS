@@ -12,6 +12,7 @@ import Combine
 class LocalSearchService: ObservableObject {
     
     @Published var landmarks: [Landmark] = []
+    @Published var landmark: Landmark?
     @Published var region = MKCoordinateRegion.defaultRegion()
     
     let locationManager = LocationManager()

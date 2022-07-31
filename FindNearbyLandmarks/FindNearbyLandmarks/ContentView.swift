@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @EnvironmentObject var localSearchService: LocalSearchService
     @State private var search: String = ""
-    // 25분
+    
     var body: some View {
         VStack {
             TextField("Search", text: $search)
@@ -22,16 +22,22 @@ struct ContentView: View {
                     localSearchService.search(query: search)
                 }
             
-            List(localSearchService.landmarks) { landmark in
-                Text(landmark.name)
+            if localSearchService.landmarks.isEmpty {
+                Text("Delicious places awaits you!")
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(.gray, lineWidth: 2)
+                    )
+            } else {
+                LandmarkListView()
             }
-            
-            LandmarkListView()
             
             Map(coordinateRegion: $localSearchService.region, showsUserLocation: true, annotationItems: localSearchService.landmarks) { landmark in
                 MapAnnotation(coordinate: landmark.coordinate) {
                     Image(systemName: "heart.fill")
-                        .foregroundColor(.red)
+                        .foregroundColor(localSearchService.landmark == landmark ? .purple : .red)
+                        .scaleEffect(localSearchService.landmark == landmark ? 2 : 1)
                 }
             }
             
