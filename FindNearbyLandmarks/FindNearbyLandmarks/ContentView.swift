@@ -26,7 +26,14 @@ struct ContentView: View {
                 Text(landmark.name)
             }
             
-            Map(coordinateRegion: $localSearchService.region)
+            LandmarkListView()
+            
+            Map(coordinateRegion: $localSearchService.region, showsUserLocation: true, annotationItems: localSearchService.landmarks) { landmark in
+                MapAnnotation(coordinate: landmark.coordinate) {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.red)
+                }
+            }
             
             Spacer()
         }
