@@ -38,6 +38,7 @@ class IndeedViewModel: ObservableObject {
     
     @Published var jobCount: [String] = []
     @Published var test: String = ""
+    @Published var test2: [String] = []
     
     
     func start() {
@@ -60,9 +61,13 @@ class IndeedViewModel: ObservableObject {
                             count += 1
                         }
                     }
+                    str = " AND NOT issuekey = \"" + str + "\""
                     print(str)
+                    self.test2.append(str)
+//                     AND NOT issuekey = "IMOWAPP-4229"
                 }
             }
+            test2.
         }
     }
 }
