@@ -15,6 +15,8 @@
 		44A899E727D66C1D00AA15DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A899D427D66C1C00AA15DA /* Assets.xcassets */; };
 		44A899F127D66C3600AA15DA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A899F027D66C3600AA15DA /* APIService.swift */; };
 		44A899F427D67C1700AA15DA /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 44A899F327D67C1700AA15DA /* SwiftSoup */; };
+		44E6AD4D28C9E7FD00DCEB36 /* html.html in Sources */ = {isa = PBXBuildFile; fileRef = 44E6AD4C28C9E7FD00DCEB36 /* html.html */; };
+		44E6AD4E28C9E7FD00DCEB36 /* html.html in Sources */ = {isa = PBXBuildFile; fileRef = 44E6AD4C28C9E7FD00DCEB36 /* html.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		44A899D927D66C1D00AA15DA /* crawlingWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crawlingWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A899DF27D66C1D00AA15DA /* crawlingWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crawlingWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A899F027D66C3600AA15DA /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/iOS/APIService.swift"; sourceTree = "<group>"; };
+		44E6AD4C28C9E7FD00DCEB36 /* html.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = html.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 				44A899D327D66C1C00AA15DA /* ContentView.swift */,
 				44A899F027D66C3600AA15DA /* APIService.swift */,
 				44A899D427D66C1C00AA15DA /* Assets.xcassets */,
+				44E6AD4C28C9E7FD00DCEB36 /* html.html */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -179,6 +183,7 @@
 			files = (
 				44A899E427D66C1D00AA15DA /* ContentView.swift in Sources */,
 				44A899F127D66C3600AA15DA /* APIService.swift in Sources */,
+				44E6AD4D28C9E7FD00DCEB36 /* html.html in Sources */,
 				44A899E227D66C1D00AA15DA /* crawlingWebApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +194,7 @@
 			files = (
 				44A899E527D66C1D00AA15DA /* ContentView.swift in Sources */,
 				44A899E327D66C1D00AA15DA /* crawlingWebApp.swift in Sources */,
+				44E6AD4E28C9E7FD00DCEB36 /* html.html in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

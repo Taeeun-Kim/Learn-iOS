@@ -12,24 +12,13 @@ import SwiftSoup
 struct ContentView: View {
     
     @StateObject var vm = IndeedViewModel()
-    
-    let people = ["Taeeun", "Jessica", "Estelle"]
-    let photos = ["flower", "flower", "Tisch", "Toy"]
 
     var body: some View {
         VStack {
-            ForEach(photos, id: \.self) { photo in
-                Text(photo)
-            }
-            
-            Button {
-                photos.map { print($0) }
-//                photos.map { photo in
-//                    print(photo)
-//                }
-            } label: {
-                Text("Click")
-            }
+            Text("")
+        }
+        .onAppear {
+            vm.start()
         }
     }
 }
@@ -44,18 +33,12 @@ class IndeedViewModel: ObservableObject {
     
     private var cancellable: AnyCancellable?
     let links = [
-        URL(string: "https://de.indeed.com/jobs?q=swift")!,
-        URL(string: "https://de.indeed.com/jobs?q=kotlin")!,
-        URL(string: "https://de.indeed.com/jobs?q=react")!,
-        URL(string: "https://de.indeed.com/jobs?q=flutter")!,
-        URL(string: "https://de.indeed.com/jobs?q=python")!,
-        URL(string: "https://de.indeed.com/jobs?q=java")!,
-        URL(string: "https://de.indeed.com/jobs?q=javascript")!,
-        URL(string: "https://de.indeed.com/jobs?q=ios")!,
-        URL(string: "https://de.indeed.com/jobs?q=android")!,
+        URL(string: "http://localhost:8080")!
     ]
     
     @Published var jobCount: [String] = []
+    @Published var test: String = ""
+    
     
     func start() {
         
@@ -63,15 +46,22 @@ class IndeedViewModel: ObservableObject {
             TaskManager.shared.dataTask(with: link) { (data, response, error) in
                 let html = String(data: data ?? Data(), encoding: .utf8) ?? ""
                 let doc: Document = try! SwiftSoup.parseBodyFragment(html)
-                let searchCountPages = try! doc.getElementById("searchCountPages")
-
-                let str = try! searchCountPages?.text() ?? ""
-                let start = str.index(str.startIndex, offsetBy: 12)
-                let end = str.index(str.endIndex, offsetBy: -5)
-                let range = start..<end
-                let test = String(str[range])
-
-                self.jobCount.append(test)
+                let issues = try! doc.getElementsByClass("jira-issue conf-macro output-block")
+                
+                for issue in issues {
+                    let issueInText = try! issue.text()
+                    var str = ""
+                    var count = 0
+                    
+                    for char in issueInText {
+                        if char != " ", count == 0 {
+                            str.append(char)
+                        } else {
+                            count += 1
+                        }
+                    }
+                    print(str)
+                }
             }
         }
     }
